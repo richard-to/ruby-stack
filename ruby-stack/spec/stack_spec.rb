@@ -13,6 +13,6 @@ describe Stack do
   it "can push an element" do
     stack = Stack.new
     stack.push 1
-    expect(stack.empty).to be_falsey
+    expect(stack.empty?).to be_falsey
   end
 end
