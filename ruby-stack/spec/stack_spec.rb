@@ -12,6 +12,16 @@ describe Stack do
     end
   end
 
+  describe "clear!" do
+    it "can remove all elements" do
+      stack = Stack.new
+      stack.push 1
+      stack.push 2
+      stack.clear!
+      expect(stack.empty?).to be_truthy
+    end
+  end
+
   describe 'push' do
     it "can push an element" do
       stack = Stack.new
@@ -21,7 +31,6 @@ describe Stack do
   end
 
   describe 'pop' do
-
     context 'when not empty' do
       it "can pop the top element" do
         stack = Stack.new
@@ -37,7 +46,6 @@ describe Stack do
         expect { stack.pop }.to raise_error StackUnderflowError
       end
     end
-
   end
 
 end
