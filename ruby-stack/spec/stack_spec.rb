@@ -21,6 +21,7 @@ describe Stack do
   end
 
   describe 'pop' do
+
     context 'when not empty' do
       it "can pop the top element" do
         stack = Stack.new
@@ -29,6 +30,14 @@ describe Stack do
         expect(stack.pop).to be 2
       end
     end
+
+    context 'when empty' do
+      it "will throw an exception" do
+        stack = Stack.new
+        expect(stack.pop).to raise_error StackUnderflowError
+      end
+    end
+
   end
 
 end

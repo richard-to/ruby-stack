@@ -1,3 +1,6 @@
+class StackUnderflowError < StandardError
+end
+
 class Stack
   def initialize
     @stack = []
