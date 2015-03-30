@@ -5,20 +5,30 @@ describe Stack do
     stack = Stack.new
   end
 
-  it "can check if it is empty" do
-    stack = Stack.new
-    expect(stack.empty?).to be_truthy
+  describe 'empty?' do
+    it "can check if stack is empty" do
+      stack = Stack.new
+      expect(stack.empty?).to be_truthy
+    end
   end
 
-  it "can push an element" do
-    stack = Stack.new
-    stack.push 1
-    expect(stack.empty?).to be_falsey
+  describe 'push' do
+    it "can push an element" do
+      stack = Stack.new
+      stack.push 1
+      expect(stack.empty?).to be_falsey
+    end
   end
 
-  it "can pop the top element" do
-    stack = Stack.new
-    stack.push 1
-    expect(stack.pop).to be 1
+  describe 'pop' do
+    context 'when not empty' do
+      it "can pop the top element" do
+        stack = Stack.new
+        stack.push 1
+        stack.push 2
+        expect(stack.pop).to be 2
+      end
+    end
   end
+
 end
