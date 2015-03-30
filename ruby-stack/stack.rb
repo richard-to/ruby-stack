@@ -10,6 +10,10 @@ class Stack
     return @stack.empty?
   end
 
+  def clear!
+    @stack = []
+  end
+
   def push(element)
     @stack.push element
   end
