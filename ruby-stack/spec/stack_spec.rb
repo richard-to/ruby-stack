@@ -9,4 +9,10 @@ describe Stack do
     stack = Stack.new
     expect(stack.empty?).to be_truthy
   end
+
+  it "can push an element" do
+    stack = Stack.new
+    stack.push 1
+    expect(stack.empty).to be_falsey
+  end
 end
