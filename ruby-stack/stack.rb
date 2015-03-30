@@ -15,6 +15,10 @@ class Stack
   end
 
   def pop
-    return @stack.pop
+    element = @stack.pop
+    if element == nil
+      raise StackUnderflowError
+    end
+    return element
   end
 end

@@ -32,9 +32,9 @@ describe Stack do
     end
 
     context 'when empty' do
-      it "will throw an exception" do
+      it "will throw a StackUnderflowError" do
         stack = Stack.new
-        expect(stack.pop).to raise_error StackUnderflowError
+        expect { stack.pop }.to raise_error StackUnderflowError
       end
     end
 
