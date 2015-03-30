@@ -15,4 +15,10 @@ describe Stack do
     stack.push 1
     expect(stack.empty?).to be_falsey
   end
+
+  it "can pop the top element" do
+    stack = Stack.new
+    stack.push 1
+    expect(stack.pop).to be 1
+  end
 end
